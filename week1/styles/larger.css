@@ -1,0 +1,23 @@
+@media only screen and (min-width: 38rem) {
+    header, main, nav, footer {
+        max-width: 900px; /* Limit the maximum width of these elements on larger screens */
+        margin: 0 auto; /* Center these elements horizontally */
+    }
+    
+    header {
+        grid-template-columns: 24px auto; /* Change to two columns since the hamburger is hidden and the third column is no longer needed */
+    }
+    .hamburger {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+    .navigation {
+        display: block; /* Always show navigation menu on larger screens */
+        border-bottom: solid 1px #ddd; /* Light grey border below the navigation menu */
+    }
+    .navigation ul {
+        display: flex; /* Use flexbox to layout navigation links horizontally */
+    }
+    .navigation a {
+        border: none; /* Remove borders between links */
+    }
+}
