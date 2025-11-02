@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 231 - Course Home Page - Marco Sandoval</title>
+    <meta name="description" content="This is the course home page for Marco Sandoval during WDD 231. This page will contain information about related courses and assignments.">
+    <meta name="author" content="Marco Sandoval">
+
+    <!-- Style Sheets -->
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Script Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/form-icon.png">
 </head>
+
 <body>
+    <header>
+        <img src="images/home.svg" alt="Site Logo" width="512" height="512">
+        <span>Marco's Site</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#">News & Events</a></li>
+            <li class="current"><a href="#">Dedicated Temples</a></li>
+            <li><a href="#">Announced Temples</a></li>
+        </ul>
+    </nav>
     <main>
-        <header>
-            <h1>Hot Dawg</h1>
-        </header>
-        <div> 
-            <img src="hotdawg.jpg" alt="A delicious hot dog">
-        </div>
-        <section>
-            <h2>About Hot Dawg</h2>
-            <p>Hot Dawg is a popular food item known for its delicious taste and variety of toppings.</p>
-        </section>
+        <h1>Dedicated Temples</h1>
     </main>
     <footer>
-        <p>&copy; 2024 Hot Dawg Inc.</p>
+        <div class="media-bar">
+            <a href="https://www.facebook.com/profile.php?id=100089012599040&sk=about_contact_and_basic_info"
+                target="_blank">
+                <img src="images/facebook.svg" alt="Facebook Logo" width="16" height="16">
+            </a>
+            <a href="https://www.instagram.com/i.am_chiaro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">
+                <img src="images/instagram.svg" alt="Instagram Logo" width="16" height="16">
+            </a>
+            <a href="https://github.com/macsandoval1999/wdd231" target="_blank">
+                <img src="images/github.svg" alt="GitHub Logo" width="16" height="16">
+            </a>
+            <a href="https://www.linkedin.com/in/marcosandoval1999/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn Logo" width="16" height="16">
+            </a>
+            </ul>
+        </div>
+        <div>
+            <p>&copy; <span id="currentyear"></span> | Marco Sandoval | Arizona, USA</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
+
 </html>
