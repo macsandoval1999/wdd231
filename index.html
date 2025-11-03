@@ -9,36 +9,87 @@
     <meta name="description" content="This is the course home page for Marco Sandoval during WDD 231. This page will contain information about related courses and assignments.">
     <meta name="author" content="Marco Sandoval">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!-- Style Sheets -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- Script Files -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/form-icon.png">
 </head>
 
 <body>
+    <!-- ***************Header*************** -->
     <header>
         <img src="images/home.svg" alt="Site Logo" width="512" height="512">
-        <span>Marco's Site</span>
+        <span>Marco Sandoval</span>
         <button id="ham-btn" class="hamburger"></button>
     </header>
+    
+    <!-- ************Navigation Menu**************** -->
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li><a href="#">News & Events</a></li>
-            <li class="current"><a href="#">Dedicated Temples</a></li>
-            <li><a href="#">Announced Temples</a></li>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
         </ul>
     </nav>
+
+    <!-- ***************Main Content*************** -->
     <main>
-        <h1>Dedicated Temples</h1>
+        <h1>Home</h1>
+
+        <!-- ***************Cards Section*************** -->
+        <div class="cards">
+
+            <!-- About Me Card -->
+            <section class="card about">
+                <h2 class="card-title">About Me</h2>
+                <p>My name is Marco Sandoval, and I am an online student at BYU-Idaho through the Pathways Program. I am currently enrolled in the Web Certificate program which is one of the three certificates I'll gain as I work towards my Bachelors in Software Development.
+                I have always had a passion for technology and programming, which is what led me to pursue this field of study. In my free time, I enjoy working on personal coding projects, exploring new technologies, and staying up-to-date with the latest trends in web development.
+                </p>
+            </section>
+
+            <!-- Profile Photo Card -->
+            <section class="card prf-photo">
+                <h2 class="card-title">Student Photo</h2>
+                <picture>
+                    <source media="(min-width: 880px)" srcset="images/profile.webp" width="400" height="534">
+                    <img src="images/profile.webp" alt="Responsive Image Example" width="200" height="267">
+                </picture>
+            </section>
+
+            <!-- Courses Card -->
+            <section class="card courses">
+                <h2 class="card-title">Web Certificate Courses</h2>
+                <div class="filter">
+                    <ul class="filter-bar">
+                        <li><a href="#" id="all" class="active" aria-current="true">All Courses</a></li>
+                        <li><a href="#" id="wdd">WDD Courses</a></li>
+                        <li><a href="#" id="cse">CSE Courses</a></li>
+                    </ul>
+                </div>
+                <h2 id="current-filter">All Courses</h2>
+                <div class="course-list"></div>
+                <div class="credits"></div>
+            </section>
+
+        </div>
     </main>
+
+    <!-- ***************Footer*************** -->
     <footer>
+        <!-- Media Bar -->
         <div class="media-bar">
             <a href="https://www.facebook.com/profile.php?id=100089012599040&sk=about_contact_and_basic_info"
                 target="_blank">
@@ -56,6 +107,8 @@
             </a>
             </ul>
         </div>
+        
+        <!-- Footer Text -->
         <div>
             <p>&copy; <span id="currentyear"></span> | Marco Sandoval | Arizona, USA</p>
             <p id="lastModified"></p>

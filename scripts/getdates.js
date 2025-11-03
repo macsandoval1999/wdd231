@@ -1,9 +1,10 @@
+// ***************SCRIPT FOR GETTING FOOTER DATES******************
+
 // Get current date
 const today = new Date(); // Create a new Date object with the current date and time
 
 // Get current year
 //Used in: footer
-//////////////////////////////////////
 const year = document.querySelector("#currentyear"); // Select the element with id 'currentyear'
 year.innerHTML = `${today.getFullYear()}`; // Set its inner HTML to the year stored in 'today'
 
@@ -11,7 +12,6 @@ year.innerHTML = `${today.getFullYear()}`; // Set its inner HTML to the year sto
     // const currentYear = document.querySelector('#currentyear');
     // currentYear.textContent = new Date().getFullYear();
 
-    
 // Set last modified date
 //Used in: footer
 const lastModified = document.querySelector('#lastModified'); // Select the element with id 'lastModified'

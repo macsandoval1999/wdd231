@@ -1,11 +1,19 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 880px) {
     header, main, nav, footer {
-        max-width: 900px; /* Limit the maximum width of these elements on larger screens */
         margin: 0 auto; /* Center these elements horizontally */
     }
-    
+    main {
+        min-height: calc(100vh - 160px); /* Ensure main content area fills the viewport height minus header and footer */
+    }
     header {
         grid-template-columns: 24px auto; /* Change to two columns since the hamburger is hidden and the third column is no longer needed */
+    }
+    header span {
+        font-size: 2.2rem; /* Slightly larger font size for the header text */;
+        margin-left: 3rem;
+    }
+    header img {
+        width: 4rem; /* Slightly larger logo image height */
     }
     .hamburger {
         display: none; /* Hide hamburger button on larger screens */
@@ -16,8 +24,79 @@
     }
     .navigation ul {
         display: flex; /* Use flexbox to layout navigation links horizontally */
+        gap: 2rem; /* Space between navigation links */
     }
     .navigation a {
         border: none; /* Remove borders between links */
+        font-size: 1.4rem;
+    }
+    .cards {
+        display: grid; /* Grid container for cards */
+        grid-template-columns: repeat(3, 1fr); /* Three column layout for larger screens */
+        gap: 2rem;
+        padding: 10px; /* Padding around the cards container */
+    }
+    .card {
+        min-width: 400px;
+    }
+    .card h2 {
+        font-size: 1.5rem; /* Larger font size for card headings */
+    }
+    .card .card-title{
+        font-size: 2rem; /* Larger font size for card headings */
+    }
+
+    .cards p {
+        font-size: 1.2rem; /* Slightly larger font size for card content */
+    }
+    .about {
+        grid-column: span 2; /* Make the about section span two columns */
+    }
+    .prf-photo {
+        grid-column: span 1; /* Make the photo section span one column */
+    }
+    .prf-photo img {
+        padding: 0; /* Remove padding around the profile photo */
+        height: 500px; /* Increase the height of the profile photo */
+        width: auto; /* Width scales proportionally to the height */
+        padding: 10px;
+    }   
+    .filter-bar a {
+        font-size: 1.5rem; /* Slightly larger font size for filter bar items */
+        padding: .5rem 3rem; /* More padding around filter bar items */
+    }
+    .courses {
+        grid-column: span 3; /* Make the courses section span all three columns */
+    }     
+    .course-list {
+        display: grid; /* Grid container for course list */
+        grid-template-columns: repeat(3, 1fr); /* Three column layout for course list on larger screens */
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .course-card {
+        text-align: center;
+        align-content: center;
+    }
+    #current-filter {
+        font-size: 2rem; /* Larger font size for current filter heading */
+    }
+    .credits {
+        font-size: 1.5rem; /* Larger font size for credits section */
+    }
+    .media-bar {
+        column-gap: 2rem; /* More space between social media icons */
+    }
+    .media-bar img {
+        width: 44px; /* Larger social media icons */
+        height: 44px; /* Height scales proportionally to width */
+    }
+    footer p {
+        font-size: 1.2rem; /* Font size for footer text */
+        ;
+    }
+    #lastModified,
+    #currentyear {
+        font-size: 1.2rem; /* Slightly larger font size for credits section */
     }
 }
