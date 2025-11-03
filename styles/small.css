@@ -263,6 +263,6 @@ footer {
 }
 #lastModified,
 #currentyear {
-    color: var(--accent2);
+    color: rgb(44, 30, 2);
     font-size: 1.2rem; /* Slightly larger font size for credits section */
 }
