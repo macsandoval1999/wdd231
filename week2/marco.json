@@ -1,0 +1,29 @@
+{
+    "familyName": "Sandoval",
+    "movedIn": "05/18/2024",
+    "familyMembers": 4,
+    "visited": true,
+    "individual": 
+        [
+            {
+                "firstName": "Marco",
+                "gender": "Male",
+                "birthDate": "02/07/1999"
+            },
+            {
+                "firstName": "Kori",
+                "gender": "Female",
+                "birthDate": "09/17/2003"
+            },
+            {
+                "firstName": "Oliver",
+                "gender": "Male",
+                "birthDate": "05/12/2018"
+            },
+            {
+                "firstName": "Elijah",
+                "gender": "Male",
+                "birthDate": "04/15/2025"
+            }
+        ]
+}
