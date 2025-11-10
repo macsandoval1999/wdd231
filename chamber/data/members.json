@@ -33,27 +33,27 @@
             "membershipLevel": "Gold"
         },
         {
-            "name": "Sunny Side Cafe",
+            "name": "Spotted Panda",
             "address": "654 Breakfast Rd, Mesa, AZ 85205",
             "phone": "(480) 555-7890",
-            "website": "https://www.sunnysidecafe.com",
-            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
+            "website": "https://www.spottedpanda.com",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/panda-logo.webp",
             "membershipLevel": "Silver"
         },
         {
-            "name": "Bright Future Tutoring",
+            "name": "Universo",
             "address": "987 Learning Ln, Mesa, AZ 85206",
             "phone": "(480) 555-2345",
-            "website": "https://www.brightfuture.com",
-            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
+            "website": "https://www.universo.com",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/universo-logo.webp",
             "membershipLevel": "member"
         },
         {
-            "name": "Downtown Bookstore",
+            "name": "Mcdowell's",
             "address": "159 Reading St, Mesa, AZ 85207",
             "phone": "(480) 555-6789",
-            "website": "https://www.downtownbookstore.com",
-            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
+            "website": "https://www.mcdowells.com",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/mcdowells-logo.webp",
             "membershipLevel": "Gold"
         }
     ]
