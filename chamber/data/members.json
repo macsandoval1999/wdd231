@@ -13,14 +13,14 @@
             "address": "456 Green St, Mesa, AZ 85202",
             "phone": "(480) 555-5678",
             "website": "https://www.greengardens.com",
-            "logo": "https://www.greengardens.com/logo.png",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
             "membershipLevel": "Silver"
         },
         {
             "name": "Healthy Living Pharmacy",
             "address": "789 Wellness Blvd, Mesa, AZ 85203",
             "phone": "(480) 555-9012",
-            "logo": "https://www.healthylivingpharmacy.com/logo.png",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
             "website": "https://www.healthylivingpharmacy.com",
             "membershipLevel": "member"
         },
@@ -29,7 +29,7 @@
             "address": "321 Workout Ave, Mesa, AZ 85204",
             "phone": "(480) 555-3456",
             "website": "https://www.cityfitness.com",
-            "logo": "https://www.cityfitness.com/logo.png",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
             "membershipLevel": "Gold"
         },
         {
@@ -37,7 +37,7 @@
             "address": "654 Breakfast Rd, Mesa, AZ 85205",
             "phone": "(480) 555-7890",
             "website": "https://www.sunnysidecafe.com",
-            "logo": "https://www.sunnysidecafe.com/logo.png",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
             "membershipLevel": "Silver"
         },
         {
@@ -45,7 +45,7 @@
             "address": "987 Learning Ln, Mesa, AZ 85206",
             "phone": "(480) 555-2345",
             "website": "https://www.brightfuture.com",
-            "logo": "https://www.brightfuture.com/logo.png",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
             "membershipLevel": "member"
         },
         {
@@ -53,7 +53,7 @@
             "address": "159 Reading St, Mesa, AZ 85207",
             "phone": "(480) 555-6789",
             "website": "https://www.downtownbookstore.com",
-            "logo": "https://www.downtownbookstore.com/logo.png",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
             "membershipLevel": "Gold"
         }
     ]
