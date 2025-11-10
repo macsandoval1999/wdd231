@@ -7,7 +7,7 @@
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #18bc9c;
-    --accent-color: #e74c3c;
+    --accent-color: #8a0e00;
     --font-color: #333333;
     --background-color: #f4f4f4;
 }
@@ -93,13 +93,17 @@ header {
     grid-column: span 3;
     display: block;
     /* Show navigation menu when 'show' class is added */
+    border-top: 1px solid #ddd;
 }
 
 .navigation ul {
     list-style: none;
     /* Remove default bullet points from list */
 }
-
+.navigation li {
+    border-radius: 8px;;
+    /* Light grey border above each link */
+}
 .navigation a {
     display: block;
     /* Make links take up full width for easier clicking */
@@ -107,15 +111,14 @@ header {
     /* Padding around links for better spacing */
     text-decoration: none;
     /* Remove underline from links */
-    color: black;
-    /* Black link color */
-    border-bottom: solid 1px #ddd;
+    color: white;
+    /* White link color */
     /* Light grey border below each link */
     transition: all 0.3s ease-in-out;
 }
 
 .navigation li.current {
-    background-color: var(--secondary);
+    background-color: var(--accent-color);
     /* Highlight current page link with light gray background */
     color: white;
     /* White text for better contrast */
@@ -127,7 +130,8 @@ header {
 }
 
 .navigation a:hover {
-    background-color: #ddd;
+    box-shadow: 0 0 5px var(--accent-color);
+    scale: 1.01;
     /* Dark blue background on hover for better interactivity */
     transition: all 0.1s ease-in-out;
 }
@@ -152,11 +156,17 @@ main {
     margin: 0.5rem;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     border-radius: 8px;
 }
 .view-toggle button:hover {
-    background-color: var(--accent-color);
+    box-shadow: 0 0 1rem var(--accent-color);
+    transition: all 0.1s ease-in-out;
+    scale: 1.1;
+}
+.view-toggle button.active {
+    background-color: var(--accent-color); /* Replace with your desired color */
+    transition: all 0.3s ease-in-out;
 }
 
 .page-title {

@@ -1,3 +1,5 @@
+// **************Directory Script Section************** // 
+
 // Decalre the URL of the JSON data file containing member information.
 const requestURL =
     "https://macsandoval1999.github.io/wdd231/chamber/data/members.json";
@@ -38,7 +40,7 @@ function displayMembers(members) {
         }
 
         name.textContent = member.name;
-        
+
         logo.setAttribute("src", member.logo);
         logo.setAttribute("alt", `Logo of ${member.name}`);
         logo.setAttribute("loading", "lazy");
@@ -65,25 +67,30 @@ function displayMembers(members) {
     });
 }
 
+// Call the function to fetch and display member data
+getMemberData();
 
 
 
-// **************View Toggle Section************** //
+// **************DirectoryView Toggle Section************** //
 const gridbutton = document.querySelector("#grid-btn");
 const listbutton = document.querySelector("#list-btn");
 const display = document.querySelector("#directory");
 
 // initial state
 display.classList.add("grid");
+gridbutton.classList.add("active"); // Set grid button as active by default
 
 // Event listener for grid view button
 gridbutton.addEventListener("click", () => {
     if (gridbutton.classList.contains("active")) {
         return;
     }
-    else if (!gridbutton.classList.contains("active")) {
+    else {
         display.classList.add("grid");
         display.classList.remove("list");
+        gridbutton.classList.add("active");
+        listbutton.classList.remove("active");
     }
 });
 
@@ -92,15 +99,10 @@ listbutton.addEventListener("click", () => {
     if (listbutton.classList.contains("active")) {
         return;
     }
-    else if (!listbutton.classList.contains("active")) {
+    else {
         display.classList.add("list");
         display.classList.remove("grid");
+        listbutton.classList.add("active");
+        gridbutton.classList.remove("active");
     }
 });
-
-
-
-// **********************Main Execution********************** //
-
-// Call the function to fetch and display member data
-getMemberData();
