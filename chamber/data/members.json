@@ -9,27 +9,27 @@
             "membershipLevel": "Gold"
         },
         {
-            "name": "Green Gardens Landscaping",
+            "name": "Wayne Enterprises",
             "address": "456 Green St, Mesa, AZ 85202",
             "phone": "(480) 555-5678",
-            "website": "https://www.greengardens.com",
-            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
+            "website": "https://www.wayneenterprises.com",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/wayne-logo.webp",
             "membershipLevel": "Silver"
         },
         {
-            "name": "Healthy Living Pharmacy",
+            "name": "Stark Enterprises",
             "address": "789 Wellness Blvd, Mesa, AZ 85203",
             "phone": "(480) 555-9012",
-            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
-            "website": "https://www.healthylivingpharmacy.com",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/stark-logo.webp",
+            "website": "https://www.starkenterprises.com",
             "membershipLevel": "member"
         },
         {
-            "name": "City Fitness Gym",
+            "name": "Tandem",
             "address": "321 Workout Ave, Mesa, AZ 85204",
             "phone": "(480) 555-3456",
-            "website": "https://www.cityfitness.com",
-            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
+            "website": "https://www.tandem.com",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/tandem-logo.webp",
             "membershipLevel": "Gold"
         },
         {
