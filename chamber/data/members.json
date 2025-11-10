@@ -1,11 +1,11 @@
 {
     "members": [
         {
-            "name": "Tech Solutions",
+            "name": "Dunder Mifflin",
             "address": "123 Tech Lane, Mesa, AZ 85201",
             "phone": "(480) 555-1234",
-            "website": "https://www.techsolutions.com",
-            "logo": "https://www.techsolutions.com/logo.png",
+            "website": "https://www.dundermifflin.com",
+            "logo": "https://macsandoval1999.github.io/wdd231/chamber/images/dunder-logo.webp",
             "membershipLevel": "Gold"
         },
         {

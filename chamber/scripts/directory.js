@@ -1,58 +1,106 @@
-// // This function is used to fetch the JSON data and populate the web page. It is defined as an asynchronous function using the async keyword. async functions allow the use of the await keyword, which makes it easier to work with promises. This function uses the Fetch API to get the JSON data from a URL, then processes that data to update the content of the web page. It calls two helper functions, populateHeader and populateHeroes, to update different parts of the page with the fetched data.
-async function populate() {
-    // Here our JSON is fetched from a file on the server. Here we store the URL of the file.
-    const requestURL =
-        "https://macsandoval1999.github.io/wdd231/chamber/data/members.json";
-    // Here we create a new request object using the URL we just defined.
-    const request = new Request(requestURL);
-    // Here we send the request using the fetch() method. This method returns a promise that resolves to the Response to that request, whether it is successful or not. await is used to wait for the promise to resolve.
-    const response = await fetch(request);
-    // Here we use the json() method of the Response object to extract the JSON body content from the response. This also returns a promise, so we use await again.
-    const members = await response.json();
+// Decalre the URL of the JSON data file containing member information.
+const requestURL =
+    "https://macsandoval1999.github.io/wdd231/chamber/data/members.json";
 
+// Select the directory container element where the member data will be displayed
+const directory = document.querySelector("#directory");
+
+// function to fetch member data for usage
+async function getMemberData() {
+    // Create a fetch request to the specified URL and wait for the response. Store it in a variable named 'response'.
+    const response = await fetch(requestURL);
+    // Parse the JSON data from the response and store it in a variable named 'members'.
+    const data = await response.json();
+    console.table(data.members);
     // Now that we have the JSON data, we can use it to populate our web page.
-    populateMembers(members);
+    displayMembers(data.members);
 }
 
-// This function populates the main section of the web page with information about each member from the JSON data. It takes a single parameter, obj, which is expected to be the JSON object containing the members.
-function populateMembers(obj) {
-    const section = document.querySelector("section"); // Selects the <section> element in the HTML document.
-    const members = obj.members; // Retrieves the array of members from the JSON object.
-    console.log(members);
-    
-    // Loops through each member in the members array.
-    for (const member of members) {
-        const card = document.createElement("section"); // Creates a new <section> element for member card.
-        const logo = document.createElement("img"); // Creates a new <img> element for member logo.
-        const address = document.createElement("p"); // Creates a new <p> element for member address.
-        const phone = document.createElement("p"); // Creates another new <p> element for member phone number.
-        const website = document.createElement("a"); // Creates a new <a> element for member website.
+// Function to create and display member directory entries
+function displayMembers(members) {
+    // Loop through each member in the members array
+    members.forEach((member) => {
+        // Create a new section element to hold the member's information
+        let card = document.createElement("section");
 
-        logo.src = member.logo; // Set the logo for the member.
-        logo.alt = member.name + " Logo"; // Set the alt text for the logo.
-        address.textContent = member.address; // Sets the text content of the address <p> element to the member's address.
-        phone.textContent = member.phone; // Sets the text content of the phone <p> element to the member's phone number.
-        website.href = member.website; // Sets the href attribute of the website <a> element to the member's website URL.
-        website.textContent = "Visit Website"; // Sets the text content of the website <a> element to "Visit Website".
+        // Create elements for the member's information
+        let name = document.createElement("h2");
+        let logo = document.createElement("img");
+        let address = document.createElement("p");
+        let phone = document.createElement("p");
+        let website = document.createElement("a");
 
-        const superPowers = hero.powers; // Retrieves the array of superpowers for the current hero.
-
-        // Loops through each superpower and creates a list item for it.
-        for (const power of superPowers) {
-            const listItem = document.createElement("li"); // Creates a new <li> element.
-            listItem.textContent = power; // Sets the text content of the <li> element to the current superpower.
-            myList.appendChild(listItem); // Appends the <li> element to the <ul> element.
+        let level = member.membershipLevel;
+        if (level === "Gold") {
+            card.classList.add("gold-member");
+        } else if (level === "Silver") {
+            card.classList.add("silver-member");
         }
 
-        myArticle.appendChild(myH2); // Appends the <h2> element to the <article> element.
-        myArticle.appendChild(myPara1); // Appends the first <p> element to the <article> element.
-        myArticle.appendChild(myPara2); // Appends the second <p> element to the <article> element.
-        myArticle.appendChild(myPara3); // Appends the third <p> element to the <article> element.
-        myArticle.appendChild(myList); // Appends the <ul> element to the <article> element.
+        name.textContent = member.name;
+        
+        logo.setAttribute("src", member.logo);
+        logo.setAttribute("alt", `Logo of ${member.name}`);
+        logo.setAttribute("loading", "lazy");
+        logo.setAttribute("width", "200");
+        logo.setAttribute("height", "100");
 
-        section.appendChild(myArticle); // Appends the <article> element to the <section> element.
-    }
+        address.textContent = member.address;
+
+        phone.textContent = member.phone;
+
+        website.textContent = member.website;
+        website.setAttribute("href", member.website);
+        website.setAttribute("target", "_blank");
+
+        // Append the elements to the card
+        card.appendChild(name);
+        card.appendChild(logo);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(website);
+
+        // Append the card to the directory container
+        directory.appendChild(card);
+    });
 }
 
-// Calls the populate function to start the process of fetching data and populating the page.
-populate();
+
+
+
+// **************View Toggle Section************** //
+const gridbutton = document.querySelector("#grid-btn");
+const listbutton = document.querySelector("#list-btn");
+const display = document.querySelector("#directory");
+
+// initial state
+display.classList.add("grid");
+
+// Event listener for grid view button
+gridbutton.addEventListener("click", () => {
+    if (gridbutton.classList.contains("active")) {
+        return;
+    }
+    else if (!gridbutton.classList.contains("active")) {
+        display.classList.add("grid");
+        display.classList.remove("list");
+    }
+});
+
+// Event listener for list view button
+listbutton.addEventListener("click", () => {
+    if (listbutton.classList.contains("active")) {
+        return;
+    }
+    else if (!listbutton.classList.contains("active")) {
+        display.classList.add("list");
+        display.classList.remove("grid");
+    }
+});
+
+
+
+// **********************Main Execution********************** //
+
+// Call the function to fetch and display member data
+getMemberData();
