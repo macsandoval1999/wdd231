@@ -215,6 +215,12 @@ main {
     /* Center text inside the card */
     gap: 0.5rem;
 }
+
+#directory section:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in-out;
+    scale: 1.02;
+}
 .directory.grid section img {
     max-width: 100%;
     /* Ensure images don't exceed card width */
