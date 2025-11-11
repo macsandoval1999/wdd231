@@ -45,7 +45,11 @@ header {
 
 
 /* ***************Hamburger Navigation Styles*************** */
-.hamburger {
+.show {
+    display: block;
+}
+
+#ham-btn {
     background: none;
     /* button element default had a grayish background, so we removed it */
     border: none;
@@ -63,18 +67,18 @@ header {
     grid-column: 3/4
 }
 
-.hamburger::before {
+#ham-btn:before {
     content: "\2630";
     /* hamburger for open menu*/
 }
 
-.hamburger:hover {
+#ham-btn:hover {
     scale: 1.3;
     /* Slightly enlarge the hamburger icon on hover for better interactivity */
     transition: all 0.1s ease-in-out;
 }
 
-.hamburger.show::before {
+#ham-btn.show::before {
     content: "\00D7";
     /* X for close menu */
 }
@@ -82,29 +86,23 @@ header {
 
 /* ***************Navigation Menu Styles*************** */
 
-.navigation {
+nav {
     display: none;
-    /* Hide navigation menu by default */
-    background-color: var(--accent1);
-    /* Light grey background color */
-}
-
-.navigation.show {
+    width: 100%;
+    /* Full width for navigation menu */
     grid-column: span 3;
-    display: block;
-    /* Show navigation menu when 'show' class is added */
     border-top: 1px solid #ddd;
+    background-color: var(--primary-color);
 }
 
-.navigation ul {
+#nav-bar {
     list-style: none;
     /* Remove default bullet points from list */
 }
-.navigation li {
-    border-radius: 8px;;
-    /* Light grey border above each link */
+#nav-bar li {
+    border-radius: 8px;
 }
-.navigation a {
+#nav-bar a {
     display: block;
     /* Make links take up full width for easier clicking */
     padding: .8rem 10px;
@@ -117,28 +115,29 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-.navigation li.current {
+#nav-bar li.current {
     background-color: var(--accent-color);
     /* Highlight current page link with light gray background */
     color: white;
     /* White text for better contrast */
 }
 
-.navigation li.current a {
+#nav-bar li.current a {
     color: white;
     /* White text for better contrast */
 }
 
-.navigation a:hover {
+#nav-bar a:hover {
+    border-radius: 8px;
     box-shadow: 0 0 5px var(--accent-color);
-    scale: 1.01;
+    scale: 1.02;
     /* Dark blue background on hover for better interactivity */
     transition: all 0.1s ease-in-out;
 }
 
 /* **************** Main Styles **************** */
 main {
-    min-height: 60vh;
+    min-height: calc(100vh - 116px - 50.39px - 16px - 27.59px - 16px);
     padding: 1rem;
 }
 .view-toggle {
@@ -193,6 +192,7 @@ main {
         display: grid;
         grid-gap: 0.5rem;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        margin: 0.5rem auto;
     }
 #directory.grid section {
     background-color: white;
@@ -231,6 +231,7 @@ main {
 
 #directory.list {
     display: block;
+    margin: 0.5rem;
 }
 #directory.list section {
     background-color: white;
@@ -283,6 +284,7 @@ footer .info-box {
     /* Span all three columns */
     text-align: left;
     /* Center the text */
+    font-size: 12.8px;
 }
 
 .media-bar {
@@ -340,12 +342,13 @@ footer .copy-box {
     /* Center the text */
     margin-bottom: 0.5rem;
     /* Space below the credits section */
+    font-size: 12.8px;
 }
 
 #lastModified,
 #currentyear {
     color: rgb(44, 30, 2);
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     /* Slightly larger font size for credits section */
     text-align: left;
 }

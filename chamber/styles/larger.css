@@ -1,0 +1,44 @@
+@media only screen and (min-width: 38rem) {
+    header {
+        grid-template-columns: 2fr 1fr; /* Change to two columns since the hamburger is hidden and the third column is no longer needed */
+    }
+    .logo-box h1 {
+        font-size: 1.5rem; /* Increase logo text size for larger screens */
+    }
+    .hamburger {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+    nav {
+        display: block; /* Show navigation menu on larger screens */
+        grid-column: 2 / 3; /* Position navigation in the second column */;
+        border: none; /* Remove border for larger screens */
+    }
+
+    #nav-bar {
+        display: flex; /* Use flexbox to layout navigation links horizontally */
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        max-width: 600px;
+    }
+    #directory.grid {
+        max-width: 990px;
+    }
+    #directory.list section {
+        margin: 0.2rem auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr 20px;
+        max-width: 990px;
+    }
+    #directory.list section, #directory.list section h2 {
+        font-size: 0.9rem;
+    }
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 1rem;
+    }
+}
