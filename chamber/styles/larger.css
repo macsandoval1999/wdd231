@@ -1,10 +1,8 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 630px) {
     header {
         grid-template-columns: 2fr 1fr; /* Change to two columns since the hamburger is hidden and the third column is no longer needed */
     }
-    .logo-box h1 {
-        font-size: 1.5rem; /* Increase logo text size for larger screens */
-    }
+
     .hamburger {
         display: none; /* Hide hamburger button on larger screens */
     }
@@ -51,4 +49,10 @@
         width: 25%;
         min-width: 200px;
     }
+}
+@media only screen and (min-width: 50rem) {
+    .logo-box h1 {
+            font-size: 1.5rem;
+            /* Increase logo text size for larger screens */
+        }
 }
