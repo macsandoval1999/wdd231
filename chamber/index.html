@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory | Mesa Chamber of Commerce</title>
-    <meta name="description" content="Directory page for the Mesa Chamber of Commerce website. This page contains a directory of local businesses and organizations that are members of the chamber.">
+    <title>Home | Mesa Chamber of Commerce</title>
+    <meta name="description"
+        content="Welcome to the Mesa Chamber of Commerce. Discover local businesses, join our community, and explore what Mesa has to offer!">
     <meta name="author" content="Marco Sandoval">
 
     <!-- Social Media Meta Tags are meta tags that are used to control how your content appears when shared on social media platforms -->
     <!-- property= og:____     This is the Facebook Open Graph meta tag -->
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="WDD 231 - Chamber of Commerce Directory - Marco Sandoval">
+    <meta property="og:title" content="Mesa Chamber of Commerce">
     <!-- meta property="og:title", this is the title of the page -->
     <meta property="og:description"
-        content="Directory page for the Mesa Chamber of Commerce website. This page contains a directory of local businesses and organizations that are members of the chamber.">
+        content="Welcome to the Mesa Chamber of Commerce. Discover local businesses, join our community, and explore what Mesa has to offer!">
     <!-- meta property="og:description", this is the description of the page -->
     <meta property="og:image" content="https://macsandoval1999.github.io/wdd231/chamber/images/preview.jpg">
     <!-- meta property="og:image", this is the image that will be displayed when the page is shared -->
-    <meta property="og:url" content="https://macsandoval1999.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://macsandoval1999.github.io/wdd231/chamber/index.html">
     <!-- meta property="og:url", this is the URL of the page -->
     <meta property="og:type" content="website"> <!-- meta property="og:type", this is the type of the page -->
 
@@ -31,16 +33,18 @@
     <!-- Script Files -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/getweather.js" defer></script>
 
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico">    
-    
+    <link rel="icon" href="images/favicon.ico">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- ***************Header*************** -->
     <header>
@@ -50,29 +54,60 @@
             <h1>Mesa Chamber of Commerce</h1>
         </div>
 
-        <!-- Hamburger Menu Button -->        
+        <!-- Hamburger Menu Button -->
         <button id="ham-btn" class="hamburger" aria-label="menu toggle"></button>
 
         <!-- ************Navigation**************** -->
-         <!-- navigation menu -->
+        <!-- navigation menu -->
         <nav>
             <ul id="nav-bar">
-                <li><a href="index.html">Home</a></li>
-                <li class="current"><a href="#">Directory</a></li>
+                <li class="current"><a href="#">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
         </nav>
     </header>
-
+        <!-- Hero Container -->
+    <div class="hero-container">
+        <div class="hero-img">
+            <picture>
+                <source media="(min-width: 1020px)" srcset="images/hero-large.webp" width="1200" height="675">
+                <source media="(min-width: 768px)" srcset="images/hero-med.webp" width="800" height="450">
+                <img src="images/hero-small.webp" alt="City of Mesa" width="400" height="225" loading="lazy">
+            </picture>
+        </div>
+        <section class="welcome-box">
+            <h2>Join Our Community!</h2>
+            <p>Thriving businesses and a vibrant community await you in Mesa. Local </p>
+            <br>
+            <p>Click <a href="discovery.html">here</a> for more information.</p>
+        </section>
+    </div>
     <!-- ********************Main***************** -->
     <main>
-        <h2 class="page-title">Business Directory</h2>
-        <div class="view-toggle">
-            <button id="grid-btn" aria-label="Grid View Button">Grid View</button>
-            <button id="list-btn" aria-label="List View Button">List View</button>
-        </div>
-        <div id="directory" class="directory">
+        <h2 class="page-title">Welcome to the Mesa Chamber of Commerce</h2>
+        <div class="mesa-info">
+
+            <section class="events-box">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li><strong>Networking Event</strong> - November 25th, 2025</li>
+                    <li><strong>Business Workshop</strong> - December 5th, 2025</li>
+                    <li><strong>Annual Gala</strong> - January 20th, 2026</li>
+                </ul>
+            </section>
+
+            <section class="current-weather-box">
+                <h3>Current Weather</h3>
+                <div id="weather-icon"></div>
+                <div id="weather-today"></div>
+            </section>  
+            
+            <section class="forecast-box">
+                <h3>3-Day Forecast</h3>
+            </section>
+
         </div>
     </main>
 
@@ -113,4 +148,5 @@
         </div>
     </footer>
 </body>
+
 </html>

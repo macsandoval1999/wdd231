@@ -8,12 +8,12 @@
     <script src="sandbox.js" defer></script>
 </head>
 <body>
-    <button id="xhr">Click to start request</button>
-    <button id="reload">Reload</button>
-
-    <pre readonly class="event-log"></pre>
-    
-    <div id="output"></div>
-
+    <div class="parent">
+        <p>Immediate child 1</p>
+        <p>Immediate child 2</p>
+        <div>
+            <p>Nested child</p>
+        </div>
+    </div>
 </body>
 </html>
