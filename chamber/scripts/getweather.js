@@ -27,7 +27,7 @@ function displayWeather(data) {
 
     // Create img element and get weather icon URL
     const icon = document.createElement('img'); 
-    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     // Set weather icon
     icon.setAttribute('src', iconsrc);
     icon.setAttribute('alt', data.weather[0].description);
@@ -76,3 +76,72 @@ fetchWeather(url);
 
 // *** 3 - Day Forecast ************************************************
 
+// Select DOM element for forecast display
+const forecastBox = document.querySelector('.forecast-box');
+
+// OpenWeatherMap API URL for 3-day forecast in Mesa, AZ
+const forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=33.41467838414674&lon=-111.83429718634753&units=imperial&appid=9413a2c5bf89718799396cb548b18ec9';
+
+// Function to fetch forecast data
+async function fetchForecast(url) {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            displayForecast(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// Function to filter forecast data for 3 days at 3 PM. These entries are for temps at 3 PM each day.
+function filterForecastByTime(data) {
+    return data.list.filter(forecast => forecast.dt_txt.includes('15:00:00'));
+}
+
+// Function to display 3-day forecast on the webpage
+function displayForecast(data) {
+    // Loop through forecast data to get entries for the next 3 days
+    const filteredData = filterForecastByTime(data);
+
+
+    for (let i = 0; i < 3; i++) {
+        // Get forecast entry
+        const forecast = filteredData[i];
+        // Create a container for each day's forecast
+        const daybox = document.createElement('div');
+        // Add class for styling
+        daybox.classList.add('forecast-day');
+        
+        // Extract and format necessary information
+        const date = new Date(forecast.dt * 1000); // Convert Unix timestamp to milliseconds
+        const weekday = date.toLocaleDateString('en-US', { weekday: 'long' }); // Get weekday name
+
+        const iconSrc = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
+        const temp = forecast.main.temp.toFixed(0);
+
+        // Create elements for each piece of information
+        const weekdayPara = document.createElement('p');
+        weekdayPara.innerHTML = `<strong>${weekday}</strong>`;
+
+        const icon = document.createElement('img');
+        icon.setAttribute('src', iconSrc);
+        icon.setAttribute('alt', forecast.weather[0].description);
+
+        const tempPara = document.createElement('p');
+        tempPara.innerHTML = `${temp}°F`;
+
+
+        // Append elements to the daybox
+        daybox.appendChild(weekdayPara);
+        daybox.appendChild(icon);
+        daybox.appendChild(tempPara);
+
+        // Append the daybox to the forecastBox
+        forecastBox.appendChild(daybox);
+    }
+}
+fetchForecast(forecastUrl);

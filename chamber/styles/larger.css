@@ -49,10 +49,29 @@
         width: 25%;
         min-width: 200px;
     }
+    .mesa-info {
+        grid-template-columns: repeat(auto-fit, minmax(404px, 1fr));
+    }
 }
 @media only screen and (min-width: 50rem) {
     .logo-box h1 {
-            font-size: 1.5rem;
-            /* Increase logo text size for larger screens */
-        }
+        font-size: 1.5rem;
+        /* Increase logo text size for larger screens */
+    }
+    .welcome-box {
+        /* Increase padding for welcome box on larger screens */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcome-box h2 {
+        font-size: 2.5rem;
+        /* Increase welcome heading size for larger screens */
+    }
+    .welcome-box p {
+        font-size: 1.2rem;
+        /* Increase welcome paragraph size for larger screens */
+    }
+    
 }
