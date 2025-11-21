@@ -25,6 +25,69 @@ body {
     overscroll-behavior-y: none; /* Prevent scroll chaining on touch devices */
 }
 
+/* ***************Dialog Styles*************** */
+#dialog-box {
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Slightly rounded corners for the dialog */
+    padding: 0; /* Removed default padding to allow custom padding in dialog-content */
+    background-color: #fff;
+    box-shadow: 0 0 3rem #000000;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+.dialog-content {
+    position: relative; /* Position relative for close button positioning */
+}
+.dialog-header {
+    border-bottom: solid 1px #ddd; /* Light grey border at the bottom */
+    margin-bottom: 10px; /* Space below the header */
+    background-color: var(--accent2); /* Primary color background for the dialog header */
+    width: 100%;
+    padding: 10px 20px;
+}
+.dialog-header h2 {
+    font-size: 1.5rem; /* Larger font size for the dialog title */
+    color: white; /* White text for better contrast */
+}
+.dialog-content h3 {
+    font-size: 1.3rem; /* Slightly larger font size for the dialog subtitles */
+    margin: 10px 20px 5px 20px; /* Margin around the subtitles top right bottom left */
+}
+.dialog-content p {
+    padding: 0 20px 10px 20px; /* Padding around the dialog content */
+    margin-bottom: 5px; /* Space below each paragraph */
+}
+
+.close-btn {
+    position: absolute; /* Position absolute for placement in the top-right corner */
+    top: 10px; /* 10px from the top of the dialog */
+    right: 10px; /* 10px from the right of the dialog */
+    background-color: var(--secondary); /* Dark blue background color for the close button */
+    border-radius: 5px; /* Slightly rounded corners for the close button */;
+    border: none; /* button element default had a border, so we removed it */
+    color: var(--accent1); /* Whitish color for the close icon */
+    cursor: pointer; /* Cursor changes to pointer on hover to indicate its clickable */
+    font-size: 1.3rem; /* Larger size for visibility */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Font family for the icon */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    width: fit-content;
+    display: flex; /* Flex container for centering icon */
+    justify-content: center; /* Center icon horizontally */
+    align-items: center; /* Center icon vertically */
+    padding: 5px 10px; /* Padding around the close icon */
+}
+.close-btn::before {
+    content: "\00D7"; /* X for close menu */
+}   
+.close-btn:hover {
+    scale: 1.05; /* Slightly enlarge the close icon on hover for better interactivity */
+    transition: all 0.1s ease-in-out;
+}
+::backdrop {
+    background : rgba(0, 0, 0, 0.473);
+}
+
 
 
 /* ***************Header Styles*************** */
@@ -112,29 +175,6 @@ h1 {
 }
 
 
-
-/* *******************Dialog Modal Styles******************* */
-dialog {
-    border: 1px solid rgb(0 0 0 / 10%);
-    border-radius: .25rem;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 0 3rem #777;
-    width: 90%;
-    max-width: 600px;
-}
-
-::backdrop {
-    background-color: rgb(0 0 0 / 50%);
-}
-
-dialog button {
-    position: absolute;
-    top: 23px;
-    right: 23px;
-    padding: .5rem 1rem;
-    border: 1px solid rgb(0 0 0 / 10%);
-}
 
 /* *******************Cards Styles******************* */
 .cards {

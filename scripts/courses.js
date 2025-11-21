@@ -1,5 +1,9 @@
 // *****************SCRIPT FOR COURSE LIST******************
 
+const dialogBox = document.querySelector('#dialog-box'); // The dialog element itself, hidden by default
+const dialogContent = document.querySelector('.dialog-content'); // The content area of the dialog
+;
+
 // Data: Array of course objects
 const courses = [
     {
@@ -94,6 +98,26 @@ function createCourseCards(filteredCourses) {
         }
         courseCard.innerHTML =
             `<h2>${course.subject} ${course.number}: ${course.title}</h2>`;
+        // Add event listener to open dialog on click
+        courseCard.addEventListener('click', () => {
+            dialogContent.innerHTML = `
+                        <div class="dialog-header">
+                            <h2 id="course-code">${course.subject} ${course.number}</h2>
+                            <button id="close-btn" class="close-btn" aria-label="close dialog box"></button>
+                        </div>
+                        <h3 id="course-title">${course.title}</h3>
+                        <p id="course-credits">Credits: ${course.credits}</p>
+                        <p>Certificate: ${course.certificate}</p>
+                        <p id="course-description">${course.description}</p>
+                        <p id="course-technology">Technology: ${course.technology}</p>
+                    `;
+            dialogBox.showModal();
+            // Re-attach the close event listener to the new close button
+            const newCloseButton = document.querySelector('#close-btn');
+            newCloseButton.addEventListener('click', () => {
+                dialogBox.close();
+            });
+        });
         document.querySelector('.course-list').appendChild(courseCard);
     });
 }
