@@ -417,7 +417,7 @@ hr {
     color: black;
 }
 .bronze {
-    background-color: #aa5f18;
+    background-color: #7a3100;
     color: white;
 }
 .np {
@@ -425,7 +425,7 @@ hr {
     color: white;
 }
 .member-form button {
-    background-color: var(--secondary-color);
+    background-color: rgb(40, 85, 68);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -459,7 +459,7 @@ input[type="submit"] {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px #818181;
+    border-bottom: solid 1px #e6e6e6;
     padding: 1rem .5rem 0.5rem 1rem;
     margin-bottom: 1rem;
     width: 100%;
