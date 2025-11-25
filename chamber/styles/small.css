@@ -566,6 +566,7 @@ input[type="submit"]:hover {
     max-width: fit-content;
     text-align: left;
     margin: 2rem auto;
+    padding: 1rem;
 }
 #thank-you-message {
     margin: 2rem auto;
@@ -584,10 +585,12 @@ input[type="submit"]:hover {
     background-color: #ddd;
     border-radius: 4px;
     padding: 1rem;
+    overflow: hidden;
 }
 .submitted-info span {
     display: block;
     margin-bottom: 0.5rem;
+    word-wrap: break-word;
 }
 #thank-you-message button {
     background-color: var(--primary-color);
@@ -598,9 +601,11 @@ input[type="submit"]:hover {
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
-
-
-
+#thank-you-message button:hover {
+    box-shadow: 0 0 1rem var(--secondary-color);
+    transition: all 0.1s ease-in-out;
+    scale: 1.02;
+}
 /* **************************DIRECTORY PAGE************************* */
 .view-toggle {
     display: block;

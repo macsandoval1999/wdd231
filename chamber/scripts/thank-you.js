@@ -11,7 +11,17 @@ const orgName = urlParams.get('orgName');
 const businessType = urlParams.get('businessType');
 const businessDescription = urlParams.get('businessDescription');
 const membershipLevel = urlParams.get('membershipLevel');
-const formattedTimestamp = new Date(urlParams.get('timestamp')).toLocaleString();
+
+const timestamp = new Date(urlParams.get('timestamp'));
+const formattedTimestamp = timestamp.toLocaleString('en-US', {
+    month: '2-digit',
+    day: '2-digit',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+});
+
 
 // Populate thank you page with extracted values
 document.getElementById('thank-you-message').innerHTML = `
@@ -27,7 +37,7 @@ document.getElementById('thank-you-message').innerHTML = `
     <br>
     <span><strong>Organization Title:</strong> ${orgTitle}</span>
     <span><strong>Business Type:</strong> ${businessType}</span>
-    <span><strong>Business Description:</strong> <br>${businessDescription}</span>
+    <span><strong>Business Description:</strong> <br><p>${businessDescription}</p></span>
     <span><strong>Submitted on:</strong> ${formattedTimestamp}</span>
     </div>
     <br>
