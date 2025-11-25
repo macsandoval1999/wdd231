@@ -70,10 +70,11 @@
     </header>
 
     <!-- ********************Main***************** -->
-    <main>
-        <h2>Member Application</h2>
-        <p>Please fill out the form below to become a member of the Mesa Chamber of Commerce.</p>
-
+    <main class="join-menu">
+        <div class ="section-header">
+            <h2>Member Application</h2>
+            <p>Please fill out the form below to become a member of the Mesa Chamber of Commerce.</p>
+        </div>
 
         <form method="GET" action="thank-you.html" class="member-form">
             
@@ -134,26 +135,8 @@
 
             <!-- Membership Level -->
             <fieldset>
-                <legend>Membership Information</legend>
-                <!-- Membership Level Information -->
-                <ul class="membership-info">
-                    <li class="np">
-                        <p>Non-Profit Membership</p>
-                        <button class="show-modal" id="np-modal" type="button">Learn More</button>
-                    </li>
-                    <li class="bronze">
-                        <p>Bronze Membership</p>
-                        <button class="show-modal" id="bronze-modal" type="button">Learn More</button>
-                    </li>
-                    <li class="silver">
-                        <p>Silver Membership</p>
-                        <button class="show-modal" id="silver-modal" type="button">Learn More</button>
-                    </li>
-                    <li class="gold">
-                        <p>Gold Membership</p>
-                        <button class="show-modal" id="gold-modal" type="button">Learn More</button>
-                    </li>
-                </ul>
+                <legend>Membership</legend>
+            
                 <!-- Membership Options -->
                 <div class="membership-options">
                     <label><input type="radio" name="membershipLevel" value="NP"> Non-Profit Membership</label>
@@ -169,6 +152,29 @@
             <!-- Submit Button -->
             <input type="submit" value="Request Membership">
         </form>
+
+        <!-- Membership Level Information -->
+         <div class="member-level-box">
+            <h2>Membership Information</h2>
+            <ul>
+                <li class="np">
+                    <p>Non-Profit Membership</p>
+                    <button class="show-modal" id="np-modal" type="button">Learn More</button>
+                </li>
+                <li class="bronze">
+                    <p>Bronze Membership</p>
+                    <button class="show-modal" id="bronze-modal" type="button">Learn More</button>
+                </li>
+                <li class="silver">
+                    <p>Silver Membership</p>
+                    <button class="show-modal" id="silver-modal" type="button">Learn More</button>
+                </li>
+                <li class="gold">
+                    <p>Gold Membership</p>
+                    <button class="show-modal" id="gold-modal" type="button">Learn More</button>
+                </li>
+            </ul>
+        </div>
 
         <!-- Modal for Membership Information -->
          <dialog id="membership-dialog">
