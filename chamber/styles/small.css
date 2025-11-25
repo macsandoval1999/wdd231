@@ -561,6 +561,46 @@ input[type="submit"]:hover {
 
 
 
+/* **********************THANK YOU PAGE************************* */
+.thank-you-menu {
+    max-width: fit-content;
+    text-align: left;
+    margin: 2rem auto;
+}
+#thank-you-message {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 600px;
+    background-color: white;
+    border: solid 1px #ddd;
+    border-radius: 8px;
+    box-shadow: 1px 2px .5rem rgba(0, 0, 0, 0.315);
+    text-align: left;
+    line-height: 1.5;
+}
+.submitted-info {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+}
+.submitted-info span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+#thank-you-message button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
 /* **************************DIRECTORY PAGE************************* */
 .view-toggle {
     display: block;

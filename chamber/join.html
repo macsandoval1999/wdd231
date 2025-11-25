@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join | Mesa Chamber of Commerce</title>
-    <meta name="description"
-        content="Join the Mesa Chamber of Commerce and become part of a thriving community of local businesses and organizations.">
+    <meta name="description" content="Join the Mesa Chamber of Commerce and become part of a thriving community of local businesses and organizations.">
     <meta name="author" content="Marco Sandoval">
 
     <!-- Social Media Meta Tags are meta tags that are used to control how your content appears when shared on social media platforms -->
@@ -16,8 +15,7 @@
     <!-- Facebook Meta Tags -->
     <meta property="og:title" content="Join | Mesa Chamber of Commerce">
     <!-- meta property="og:title", this is the title of the page -->
-    <meta property="og:description"
-        content="Join the Mesa Chamber of Commerce and become part of a thriving community of local businesses and organizations.">
+    <meta property="og:description" content="Join the Mesa Chamber of Commerce and become part of a thriving community of local businesses and organizations.">
     <!-- meta property="og:description", this is the description of the page -->
     <meta property="og:image" content="https://macsandoval1999.github.io/wdd231/chamber/images/preview.jpg">
     <!-- meta property="og:image", this is the image that will be displayed when the page is shared -->
@@ -91,9 +89,9 @@
                 </label>
 
                 <!-- Organizational Title -->
-                <label>Organizational Title <input type="text" name="orgTitle" id="orgTitle" required autocomplete="organization-title" title="Org. Title (7 Characters Minimum, Letters Only)" pattern="[A-Za-z][A-Za-z]{5,}[A-Za-z]" placeholder="Manager">
+                <label>Organizational Title <input type="text" name="orgTitle" id="orgTitle" required autocomplete="organization-title" title="Org. Title (7 Characters Minimum, Letters Only)" pattern="[A-Za-z][A-Za-z]{1,}[A-Za-z]" placeholder="Manager">
                 </label>
-                <!-- [A-Za-z] means any uppercase or lowercase letter for the first character. [A-Za-z]{5,} means at least 5 letters between the first and last character. [A-Za-z] means any uppercase or lowercase letter for the last character. -->
+                <!-- [A-Za-z] means any uppercase or lowercase letter for the first character. [A-Za-z]{5,} means at least 1 letters between the first and last character. [A-Za-z] means any uppercase or lowercase letter for the last character. -->
             </fieldset>
 
             <!-- Contact Information -->
@@ -129,7 +127,7 @@
                 </label>
                 <!-- Business Description -->
                 <label>Business Description 
-                    <textarea name="businessDescription" required title="Describe your business (10-200 characters)" minlength="10" maxlength="200" placeholder="Describe your business here..."></textarea>
+                    <textarea name="businessDescription" required title="Describe your business (10-200 characters)" minlength="10" maxlength="500" placeholder="Describe your business here..."></textarea>
                 </label>
             </fieldset>
 
