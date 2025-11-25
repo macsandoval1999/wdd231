@@ -35,10 +35,10 @@ document.getElementById('thank-you-message').innerHTML = `
     <div class="submitted-info">
     <h3>Submission Details:</h3>
     <br>
-    <span><strong>Organization Title:</strong> ${orgTitle}</span>
-    <span><strong>Business Type:</strong> ${businessType}</span>
-    <span><strong>Business Description:</strong> <br><p>${businessDescription}</p></span>
-    <span><strong>Submitted on:</strong> ${formattedTimestamp}</span>
+    <span><strong>Organization:</strong> ${orgName}</span>
+    <span><strong>Industry:</strong> ${businessType}</span>
+    <span><strong>Description:</strong> <br><p>${businessDescription}</p></span>
+    <span><strong>Submission Date:</strong> ${formattedTimestamp}</span>
     </div>
     <br>
     <button onclick="window.location.href='index.html'">Return to Home Page</button>
