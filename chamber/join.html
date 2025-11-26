@@ -89,7 +89,7 @@
                 </label>
 
                 <!-- Organizational Title -->
-                <label>Organization Title <input type="text" name="orgTitle" id="orgTitle" required autocomplete="organization-title" title="Org. Title (7 Characters Minimum, Letters Only)" pattern="[A-Za-z][A-Za-z]{5,}[A-Za-z]" placeholder="Manager">
+                <label>Organization Title <input type="text" name="orgTitle" id="orgTitle" required autocomplete="organization-title" title="Org. Title (7 Characters Minimum)" pattern="[A-Za-z\s-]{7,}" placeholder="Manager">
                 </label>
                 <!-- [A-Za-z] means any uppercase or lowercase letter for the first character. [A-Za-z]{5,} means at least 1 letters between the first and last character. [A-Za-z] means any uppercase or lowercase letter for the last character. -->
             </fieldset>
@@ -111,7 +111,7 @@
             <fieldset>
                 <legend>Business Information</legend>
                 <!-- Organization Name -->
-                <label>Organization Name <input type="text" name="orgName" id="orgName" required autocomplete="organization" title="Organization Name (5-75 Characters)" pattern=".{5,75}" placeholder="Business Name">
+                <label>Organization Name <input type="text" name="orgName" id="orgName" required autocomplete="organization" title="Organization Name (5-75 Characters)" pattern=".{5,75}">
                 </label>
                 <!-- pattern=".{5,75}" means any character (.) with a minimum of 5 characters and a maximum of 75 characters -->
                 <!-- Business Type -->
