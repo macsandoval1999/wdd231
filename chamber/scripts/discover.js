@@ -7,6 +7,7 @@ import { places } from "../data/places.mjs";
 const container = document.querySelector(".places-container");
 // Function to create and append cards to the container
 function createCards(places) { // Function to create and append cards to the container
+    container.innerHTML = ""; // Clear any existing content in the container
     places.forEach((place) => { //for each place in the places array
         const card = document.createElement("div"); // Create a div element for the card and add class
         card.classList.add("place-card");
@@ -26,7 +27,7 @@ function createCards(places) { // Function to create and append cards to the con
         <span>Cost: ${place.cost}</span>
         <p>${place.description}</p>
 
-        <button><a href="${place.website}">Learn More</a></button>
+        <button title="Learn more about ${place.name}"><a href="${place.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></button>
     `;
 
         container.appendChild(card);
