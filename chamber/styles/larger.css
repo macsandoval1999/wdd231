@@ -60,6 +60,58 @@
         border-color: #6b6b6b;
         transition: all 0.1s ease-in-out;
     }
+    .place-card hr {
+        display: none;
+    }
+    .place-card {
+        grid-template-areas: 
+            "image name"
+            "image address"
+            "image cost"
+            "image description"
+            "image button"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+    .place-card:hover {
+        transform: scale(1.02);
+    }
+    .place-card img {
+        height: 100%;
+        width: 100%;
+        opacity: 0.5; /* Initial opacity for hover effect */
+    }
+    .place-card img:hover {
+        opacity: 1;
+        /* Full opacity on hover */
+        transition: opacity 0.3s ease;
+    }
+    .place-card hr {
+        display: none;
+    }
+
+    .place-card {
+        grid-template-areas:
+            "image name"
+            "image address"
+            "image cost"
+            "image description"
+            "image button"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .place-card img {
+        height: 100%;
+        width: 100%;
+    }
+    .place-card button {
+        transition: all 0.3s ease;
+    }
+    .place-card button:hover {
+        background-color: var(--secondary-color);
+        transition: background-color 0.1s ease;
+    }
 }
 @media only screen and (min-width: 800px) {
     .logo-box h1 {
@@ -112,6 +164,9 @@
     }
     .member-level-box h2 {
         color: white;
+    }
+    .places-container {
+        grid-template-columns: 1fr 1fr;
     }
 
     /* ************************JOIN PAGE Animation*********************** */
