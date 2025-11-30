@@ -816,7 +816,6 @@ CARD GRID LAYOUT
 
 .place-card hr {
     width: unset;
-    margin: unset;
     margin: 0 1rem 0.5rem 1rem;
     grid-area: separator;
 }
