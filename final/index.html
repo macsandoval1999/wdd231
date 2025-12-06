@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<!--****************
+ HEAD SECTION
+*****************-->
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Blacktop Automotives</title>
+    <meta name="description" content="High-quality automotive services. High-end cars, affordable prices, and expert mechanics. Check out our inventory and services today!">
+    <meta name="author" content="Marco Sandoval">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Home | Blacktop Automotives">
+    <meta property="og:description" content="High-quality automotive services. High-end cars, affordable prices, and expert mechanics. Check out our inventory and services today!">
+    <meta property="og:image" content="https://macsandoval1999.github.io/wdd231/final/images/preview.jpg">
+    <meta property="og:url" content="https://macsandoval1999.github.io/wdd231/final/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Instagram Meta Tags -->
+    <meta name="instagram:title" content="Home | Blacktop Automotives">
+    <meta name="instagram:description" content="High-quality automotive services. High-end cars, affordable prices, and expert mechanics. Check out our inventory and services today!">
+    <meta name="instagram:image" content="https://macsandoval1999.github.io/wdd231/final/images/preview.jpg">
+    <meta name="instagram:url" content="https://macsandoval1999.github.io/wdd231/final/index.html">
+    <meta name="instagram:type" content="website">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Script Files -->
+    <script src="scripts/nav-n-footer.js" defer></script>
+    <script type="module" src="scripts/index-main.mjs" ></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+
+
+<!--****************
+BODY SECTION
+*****************-->
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.svg" alt="Blacktop Automotives Logo" width="150" height="150"></a>
+        <h1>Blacktop Automotives</h1>
+        <nav>
+            <ul>
+                <li class="current-page"><a href="index.html">Home</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+            </ul>
+        </nav>
+        <a id="menu" href="#" aria-label="Menu"></a>
+    </header>
+
+    <main>
+        <section class="hero-container" aria-label="Hero Section">
+            <picture>
+                <source media="(min-width: 1025px)" srcset="images/hero-large.webp" width="1200" height="675">
+                <source media="(min-width: 601px)" srcset="images/hero-med.webp" width="800" height="450">
+                <img src="images/hero-small.webp" alt="A Ford Mustand 1969 in a dark garage with lights shining on it" width="320" height="180" loading="lazy"> 
+            </picture>
+            <div class="hero-text">
+                <h2>Dream Car? We have it<span class="highlight">.</span></h2>
+                <p>Discover your perfect ride with Blacktop Automotives.</p>
+                <a href="inventory.html" class="hero-button">Explore Inventory</a>
+            </div>
+        </section>
+        
+        <section class="intro-section" aria-label="Introduction Section">
+            <h2 class="section-title">Welcome to Blacktop Automotives</h2>
+            <p>At Blacktop Automotives, we specialize in high-quality automotive services for a wide range of vehicles. Whether you're looking for a classic car restoration or routine maintenance, our expert mechanics are here to help. Explore our extensive inventory of high-end cars at affordable prices and experience top-notch service that keeps you on the road.</p>
+        </section>
+        <!-- TO BE CONTINUED -->
+    </main>
+</body>
+</html>
