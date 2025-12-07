@@ -58,17 +58,20 @@ export function buildModal(vehicle) {
 
 
 // Build Inventory Cards and add modals
-export function buildCards(data = inventory) {
+export function buildCards(data = inventory) { // Default to full inventory if no data is passed data = inventory. This way, if we call buildCards() without any arguments, it will use the full inventory by default. After the  initial build, we can pass filtered type. 
+// For sorting, we call this function inside the sortAndBuildCards function and pass the sorted array so it builds cards based on the sorted data. This way, we can filter and sort the inventory dynamically.
     const cardsContainer = document.getElementById('inventory-cards');
     cardsContainer.innerHTML = '';
     data.forEach(vehicle => {
         const card = document.createElement('div');
         card.classList.add('vehicle-card');
         card.innerHTML = `
-            <picture>
-                <source media="(min-width: 600px)" srcset="${vehicle.imageLarge}" alt="${vehicle.make} ${vehicle.model}" loading="lazy" width="480" height="290">
-                <img src="${vehicle.imageSmall}" alt="${vehicle.make} ${vehicle.model}" loading="lazy" width="380" height="230">
-            </picture>
+            <div class="vehicle-image-container"></div>
+                <picture>
+                    <source media="(min-width: 600px)" srcset="${vehicle.imageLarge}" alt="${vehicle.make} ${vehicle.model}" loading="lazy" width="480" height="290">
+                    <img src="${vehicle.imageSmall}" alt="${vehicle.make} ${vehicle.model}" loading="lazy" width="380" height="230">
+                </picture>
+            </div>
             <h3>${vehicle.year} ${vehicle.make} ${vehicle.model}</h3>
             <p>Price: $${vehicle.price.toLocaleString()}</p>
         `;

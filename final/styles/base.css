@@ -8,7 +8,7 @@ Universal Styles
 }
 :root {
     --highlight-color: #00a2ff;
-    --primary-color: rgba(11, 27, 53, 1);
+    --primary-color: #0b1b35;
     --darkbg-text: #ffffff;
     --secondary-color: #cccccc;
 }
@@ -230,7 +230,6 @@ INVENTORY PAGE STYLES
     gap: 1rem;
     padding: 1rem;
     justify-items: center;
-
 }
 .vehicle-card {
     background-color: var(--primary-color);
@@ -268,6 +267,9 @@ INVENTORY PAGE STYLES
     border-radius: 5px;
 }
 #inventory-filter a.active {
+    color: var(--darkbg-text);
+}
+#inventory-sort a.active {
     color: var(--darkbg-text);
 }
 
@@ -337,7 +339,6 @@ INVENTORY PAGE STYLES
     padding: 2rem;
     color: var(--secondary-color);
 }
-
 
 
 /* ***************
