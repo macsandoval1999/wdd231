@@ -6,26 +6,30 @@
 <!--****************
  HEAD SECTION
 *****************-->
+
 <head>
     <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory | Blacktop Automotives</title>
-    <meta name="description" content="Check out our extensive inventory of high-end vehicles at Blacktop Automotives. From sleek sedans to powerful SUVs, find your dream car today!">
+    <title>Scheduling | Blacktop Automotives</title>
+    <meta name="description"
+        content="Test drive your dream car today, or schedule a maintenance appointment with Blacktop Automotives. Our expert team is here to assist you with all your automotive needs.">
     <meta name="author" content="Marco Sandoval">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Inventory | Blacktop Automotives">
-    <meta property="og:description" content="Check out our extensive inventory of high-end vehicles at Blacktop Automotives. From sleek sedans to powerful SUVs, find your dream car today!">
+    <meta property="og:title" content="Scheduling | Blacktop Automotives">
+    <meta property="og:description"
+        content="Test drive your dream car today, or schedule a maintenance appointment with Blacktop Automotives. Our expert team is here to assist you with all your automotive needs.">
     <meta property="og:image" content="https://macsandoval1999.github.io/wdd231/final/images/preview.jpg">
-    <meta property="og:url" content="https://macsandoval1999.github.io/wdd231/final/inventory.html">
+    <meta property="og:url" content="https://macsandoval1999.github.io/wdd231/final/scheduling.html">
     <meta property="og:type" content="website">
 
     <!-- Instagram Meta Tags -->
-    <meta name="instagram:title" content="Inventory | Blacktop Automotives">
-    <meta name="instagram:description" content="Check out our extensive inventory of high-end vehicles at Blacktop Automotives. From sleek sedans to powerful SUVs, find your dream car today!">
+    <meta name="instagram:title" content="Scheduling | Blacktop Automotives">
+    <meta name="instagram:description"
+        content="Test drive your dream car today, or schedule a maintenance appointment with Blacktop Automotives. Our expert team is here to assist you with all your automotive needs.">
     <meta name="instagram:image" content="https://macsandoval1999.github.io/wdd231/final/images/preview.jpg">
-    <meta name="instagram:url" content="https://macsandoval1999.github.io/wdd231/final/inventory.html">
+    <meta name="instagram:url" content="https://macsandoval1999.github.io/wdd231/final/scheduling.html">
     <meta name="instagram:type" content="website">
 
     <!-- Style Sheets -->
@@ -34,13 +38,11 @@
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- Script Files -->
-    <script src="scripts/nav-n-footer.js" defer></script>
-    <script src="scripts/getdates.js" defer></script>
-    <script type="module" src="scripts/inventory-main.js"></script>
+     <script src="scripts/nav-n-footer.js" defer></script>
+    <script src="scripts/schedule-main.js" defer></script>
 
-    <!-- Icons -->
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,38 +64,15 @@ BODY SECTION
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li class="current-page"><a href="#">Inventory</a></li>
-                <li><a href="scheduling.html">Schedule</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li class="current-page"><a href="#">Schedule</a></li>
             </ul>
         </nav>
         <a id="menu" href="#" aria-label="Menu"></a>
     </header>
     <main>
-        <!-- Inventory Title -->
-        <h2 class="section-title">Explore our Vehicles</h2>
 
-        <!-- Inventory Filter Menu -->
-        <ul id="inventory-filter">
-            <li><a href="#" id="all">All</a></li>
-            <li><a href="#" id="sedan">Sedans</a></li>
-            <li><a href="#" id="suv">SUVs</a></li>
-            <li><a href="#" id="truck">Trucks</a></li>
-            <li><a href="#" id="coupe">Coupes</a></li>
-            <li><a href="#" id="saved">Saved <i class="fa-regular fa-heart"></i></a></li>
-        </ul>
-
-        <ul id="inventory-sort">
-            <li><a href="#" id="sort-price-asc"><span class="arrow">&uarr;</span> Low to High</a></li>
-            <li><a href="#" id="sort-price-desc">High to Low <span class="arrow">&darr;</span></a></li>
-        </ul>
-
-        <!-- Inventory Cards Container -->
-        <div id="inventory-cards"></div>
-
-        <!-- Modal for Membership Information -->
-        <dialog id="vehicle-modal-container"></dialog>
     </main>
-
     <!-- Footer -->
     <footer>
         <div class="info-box">

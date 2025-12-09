@@ -15,7 +15,7 @@ Universal Styles
 body {
     min-width: 320px;
     overflow-x: hidden;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'sans-serif', Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
 }
 
@@ -116,6 +116,8 @@ header a {
     width: fit-content;
 }
 
+
+
 /* *****************
 INDEX PAGE STYLES
 ********************/
@@ -139,7 +141,7 @@ INDEX PAGE STYLES
     width: 75%;
     text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
-.hero-text>h2 {
+.hero-text h2 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
 }
@@ -150,12 +152,125 @@ INDEX PAGE STYLES
     display: inline-block;
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
+    background-color: #0b1b35b4;
+    border: 1px solid rgba(255, 255, 255, 0.171);
     color: var(--darkbg-text);
     text-decoration: none;
     font-size: 1rem;
     border-radius: 5px;
 }
+
+/* Introduction Section */
+.intro-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+.intro-container p {
+    max-width: 600px;
+    padding: 1rem;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.intro-card {
+    position: relative;
+    width: 100%;
+    margin: 0.5rem auto;
+}
+.intro-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.507);
+}
+.intro-card-caption {
+    position: absolute;
+    bottom: 3px;
+    left: 10%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: #fff;
+    width: 80%;
+    height: 45%;
+    text-align: left;
+    padding: 0 0 1rem 0;
+    font-size: 0.9rem;
+}
+.intro-card-header {
+    position: absolute;
+    top: 25%;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-radius: 10px;
+    color: #fff;
+    left: 10%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+
+/* Contact Us section */
+.contact-us {
+    text-align: left;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.contact-us h3, .visit-us h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.contact-us p, .visit-us p, .visit-us address {
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+.contact-us a {
+    position: absolute;
+    right: 1rem;
+    color: var(--darkbg-text);
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    float: right;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.contact-us a:hover {
+    transform: translateY(-3px);
+    transition: all 0.1s ease;
+    box-shadow: 0 0 10px var(--highlight-color);
+    border: 1px solid var(--primary-color);
+}
+
+/* Visit Us Section */
+.visit-us {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+.visit-us iframe {
+    margin-top: 1rem;
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+}
+.visit-us address {
+    padding: 0.5rem 0;
+}
+
+
+
+
+
+
 
 
 
@@ -339,6 +454,22 @@ INVENTORY PAGE STYLES
     padding: 2rem;
     color: var(--secondary-color);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ***************
