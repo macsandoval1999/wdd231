@@ -77,6 +77,17 @@ Page-Wide Styles
 .fa-heart {
     color: var(--highlight-color);
 }
+.project-link {
+    display: block;
+    text-decoration: none;
+    color: var(--darkbg-text);
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+    width: fit-content;
+    margin: 0.5rem 0 0 auto;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
 
 /* Mobile Navigation Menu */
 nav {
