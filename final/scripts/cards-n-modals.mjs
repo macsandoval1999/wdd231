@@ -1,6 +1,6 @@
 // Import inventory and services data
 
-import { inventory, services } from "./fetchers.mjs";
+import { inventory} from "./fetchers.mjs";
 import { saveVehicle, unsaveVehicle, isVehicleSaved } from "./check-saved.mjs";
 
 
@@ -15,7 +15,7 @@ export function buildModal(vehicle) {
                 <source media="(min-width: 600px)" srcset="${vehicle.imageLarge}" alt="${vehicle.make} ${vehicle.model}" loading="lazy" width="380" height="230">
                 <img src="${vehicle.imageSmall}" alt="${vehicle.make} ${vehicle.model}" loading="lazy" width="480" height="290">
             </picture>
-            <h2>${vehicle.year} ${vehicle.make} ${vehicle.model}</h2>
+            <h2>#${vehicle.id}<br><br>${vehicle.year} ${vehicle.make} ${vehicle.model}</h2>
             <p><strong>Price:</strong> $${vehicle.price.toLocaleString()}</p>
             <p><strong>Mileage:</strong> ${vehicle.mileage.toLocaleString()} miles</p>
             <p><strong>Color:</strong> ${vehicle.color}</p>
@@ -74,6 +74,7 @@ export function buildCards(data = inventory) { // Default to full inventory if n
             </div>
             <h3>${vehicle.year} ${vehicle.make} ${vehicle.model}</h3>
             <p>Price: $${vehicle.price.toLocaleString()}</p>
+            <span class="vehicle-card-id">#${vehicle.id}</span>
         `;
 
         // Save button

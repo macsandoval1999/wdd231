@@ -271,6 +271,19 @@
         transform: scale(1.05);
         transition: all 0.1s ease;
     }
+
+    /* ************
+    THANK YOU STYLES
+    ***************/
+    .thank-you-content button {
+        transition: all 0.3s ease;
+    }
+    .thank-you-content button:hover {
+        background-color: var(--darkbg-text);
+        color: var(--primary-color);
+        transition: all 0.1s ease;
+        box-shadow: 0 0 10px var(--primary-color);
+    }
 }
 @media (min-width: 680px) {
     header h1 { 
@@ -332,6 +345,7 @@
         font-size: 1.3rem;
 
     }
+
 
 
 

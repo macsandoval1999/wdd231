@@ -45,7 +45,7 @@ header {
 }
 
 main {
-    min-height: 80vh;
+    min-height: 85vh;
     background-color: #f0f0f0;
 }
 
@@ -364,6 +364,15 @@ INVENTORY PAGE STYLES
     right: 0;
     margin: 0.5rem 1rem;
 }
+.vehicle-card-id {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
 
 /* Active Filter */
 .active {
@@ -526,14 +535,179 @@ SCHEDULING PAGE
     background-color: var(--background);
 }
 
+/* service modals */
+#services-modal-container {
+    margin: auto;
+    position: fixed;
+    width: 75%;
+    max-width: 600px;
+    height: 360px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.281);
+    max-height: 60%;
+    overflow-x: hidden;
+    border: none;
+}
+#services-modal-header {
+    background-color: var(--primary-color);
+    color: var(--darkbg-text);
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    margin: -1rem 0 0 0;
+    text-align: center;
+}
+#services-modal-content {
+    position: relative;
+    background-color: var(--darkbg-text);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 1rem;
+    margin: 0 auto;
+    height: calc(100% - 4rem);
+}
+#services-modal-header h2{
+    padding: 1rem 0 0.5rem 0;
+}
+#services-modal-content p {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    font-size: 1rem;
+}
+#services-modal-content ul {
+    list-style: disc;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+}
+#services-modal-content li {
+    margin-bottom: 0.5rem;  
+}
+
+#services-modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    color: var(--darkbg-text);
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: none;
+}
+
+/* Form Section */
+.required {
+    color: red;
+    padding-left: 0.5rem;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+form {
+    max-width: 1000px;
+    padding: 2rem 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.37);
+}
+fieldset {
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+legend {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="date"], textarea, select {
+    width: 100%;
+    display: block;
+    max-width: 400px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #0b1b35;
+}
+input[type="date"], select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+textarea {
+    resize: none;
+    height: 150px;
+}
+button[type="submit"] {
+    margin-left: 1rem;
+    background-color: var(--primary-color);
+    color: var(--darkbg-text);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+input[required]:invalid:focus,
+input[required]:invalid:not(:placeholder-shown),
+textarea:invalid:focus,
+textarea:invalid:not(:placeholder-shown),
+select:invalid:focus {
+    box-shadow: 0 0 0.5rem rgba(255, 0, 0, 0.473);
+}
 
 
 
-
-
-
-
-
+/* **************************
+THANK YOU PAGE STYLES
+*****************************/
+.thank-you-content {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background-color: var(--darkbg-text);
+}
+.thank-you-message-text {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+.submitted-info {
+    margin-top: 2rem;
+    text-align: left;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.submitted-info h3 {
+    margin-bottom: 1rem;
+}
+.submitted-info p {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+.thank-you-content button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--darkbg-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
 
 
 
