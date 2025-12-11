@@ -112,4 +112,3 @@ export function buildCards(data = inventory) { // Default to full inventory if n
         cardsContainer.appendChild(card);
     });
 }
-

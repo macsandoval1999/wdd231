@@ -36,7 +36,7 @@
 
     <!-- Script Files -->
     <script src="scripts/nav-n-footer.js" defer></script>
-    <script src="scripts/form.js" defer></script>
+    <script type="module" src="scripts/scheduling.js"></script>
     <script src="scripts/getdates.js" defer></script>
 
     <!-- Favicon -->
@@ -58,14 +58,131 @@ BODY SECTION
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="inventory.html">Inventory</a></li>
-                <li class="current-page"><a href="#">Scheduling</a></li>
+                <li class="current-page"><a href="#">Services</a></li>
             </ul>
         </nav>
         <a id="menu" href="#" aria-label="Menu"></a>
     </header>
-    <main>
 
+
+
+    <main>
+        <!-- Service Spotlight and info-->
+        <section class="service-spotlight-container">
+            <h2 class="section-title">Explore Our Services</h2>
+            <h3 class="section-subtitle">Popular Services</h3>
+            <div id="service-spotlight-container"></div>
+        </section>
+
+
+        <!-- Service Options -->
+        <section class="service-options-container">
+            <h3 class="section-subtitle">Check Out Our Service Options</h3>
+            <div id="service-modal-open-buttons">
+                <div class="service-modal-button-card">
+                <button id="maintenance-modal" title="Schedule Maintenance Service"><img src="images/cog.svg" alt="Maintenance Service Icon" width="24" height="24"></button>
+                <h3>Maintenance</h3>
+            </div>
+                <div class="service-modal-button-card">
+                <button id="consultation-modal" title="Schedule Consultation Service"><img src="images/paperwork.svg" alt="Consultation Service Icon" width="24" height="24"></button>
+                <h3>Consultation</h3>
+            </div>
+                <div class="service-modal-button-card">
+                <button id="custom-modal" title="Schedule Custom Service"><img src="images/upgrade.svg" alt="Custom Service Icon" width="24" height="24"></button>
+                <h3>Custom</h3>
+            </div>  
+        </section>  
+
+
+        <section class="form-section">
+            <h2 class="section-title">Schedule Your Appointment Today!</h2>
+            <h3 class="section-subtitle">Please fill out the form below to book your service appointment.</h3>
+        <!-- Form -->
+        <form method="GET" action="thank-you.html" class="member-form">
+            <fieldset>
+
+                    <!-- Contact Information -->
+                <legend>Help Us Get to Know You Better<span class="required">*</span></legend>
+                <!-- Full Name -->
+                <label>Full Name<span class="required">*</span><input type="text" name="fullName" id="fullName" required autocomplete="given-name" title="Your Full Name" minlength="2" pattern="[A-Za-z\\-\\s]{2,}">
+                </label>
+                <!-- Email -->
+                <label>Email<span class="required">*</span><input type="email" name="email" id="email" required autocomplete="email"
+                        title="Your Email Address" placeholder="example@example.com">
+                </label>
+                <!-- Phone Number -->
+                <label>Phone Number<span class="required">*</span><input type="tel" name="phone" id="phone" required autocomplete="tel" title="Your Phone Number" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(123) 456-7890">
+                </label>
+            </fieldset>
+
+
+            <!-- Appointment Details -->
+            <fieldset>
+                <legend>What Can We Do For You?<span class="required">*</span></legend>
+                <!-- Service Type -->
+                <label>Service Type<span class="required">*</span>
+                    <select name="serviceType" id="service-type" required>
+                        <option value="" disabled selected>Select a service type &#9207;</option>
+                        <option value="Maintenance">Maintenance</option>
+                        <option value="Consultation">Consultation</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                </label>
+                <!-- Preferred Date -->
+                <label>Preferred Date
+                    <select name="preferredDate" id="preferred-date">
+                        <option value="" disabled selected>Select a date &#9207;</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <!-- Service Appointments Only -->
+            <fieldset>
+                <legend>Service Appointments Only</legend>
+                <!-- Vehicle Details -->
+                <label>Tell Us About Your Vehicle
+                    <input type="text" name="vehicleDetails" id="vehicle-details" placeholder="Make, Model, Year">
+                </label>
+                <!-- Extra Service Details -->
+                <label>Additional Details
+                    <textarea name="extraServiceDetails" id="extra-service-details" rows="4" placeholder="Please provide any additional information here..."></textarea>
+                </label>
+            </fieldset>
+      
+            <!-- Vehicle Inquiry -->
+            <fieldset>
+                <legend>Vehicle Inquiries Only<span class="required">*</span></legend>
+                <!-- See vehicle -->
+                <label>Are you scheduling this appointment in relation to one of our vehicles?</label>
+                    <label><input id="vehicle-yes" type="radio" name="vehicleRelation" value="Yes" required> Yes</label>
+                    <label><input id="vehicle-no" type="radio" name="vehicleRelation" value="No" required> No</label>
+                <label>If so, please provide the vehicle id
+                    <input title="Vehicle ID" type="number" min="1" name="vehicleID" id="vehicleID" placeholder="1">
+                </label>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submit-button">Schedule Appointment</button>
+        </form>
+
+
+        <!-- Services Modal -->
+        <dialog id="services-modal-container">
+            <div id="services-modal-header"></div>
+            <div id="services-modal-content"></div>
+            <button id="services-modal-close" aria-label="Close Services Modal">Close</button>
+        </dialog>
     </main>
+
+
+
     <!-- Footer -->
     <footer>
         <div class="info-box">

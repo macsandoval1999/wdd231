@@ -11,37 +11,64 @@
     /* ************
     PAGE WIDE STYLES
     ***************/
-    header img {
-        width: 300px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
     #menu {
         display: none;
     }
 
     nav {
         display: block;
+        padding: 0.5rem;
+        justify-self: end;
     }
 
     nav ul {
         flex-direction: row;
-        justify-content: center;
-        gap: 3rem;
+        padding: 0;
+        width: 100%;
+        justify-content: space-evenly;
+        background-color: white;
+        border-radius: 10px;
+        max-width: 600px;
     }
 
     nav ul li {
         margin: 0;
         transition: all 0.3s ease;
+        border: 0;
+        padding-top: 5px;
+        height: fit-content;
     }
 
     nav ul li:hover {
         background-color: var(--secondary-color);
-        border: 0.5ch double var(--darkbg-text);
         transition: all 0.1s ease;
+    }
+    nav ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 1rem;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 100px auto 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    header h1 { 
+        grid-column: 2/3;
+        font-size: 1.1rem;
+        justify-self: self-start;
+        align-self: center;
+    }
+    nav {
+        grid-column: 3/4;
+        align-self: center;
+    }
+    header img {
+        width: 100px;
+        height: auto;
     }
 
 
@@ -129,7 +156,9 @@
         border-radius: 0;
         height: 50%;
     }
-
+    .contact-us a {
+        transition: all 0.3s ease;
+    }
     .contact-us a:hover {
         transform: translateY(-3px);
         transition: all 0.1s ease;
@@ -213,12 +242,66 @@
         transition: all 0.1s ease;
     }
 
+
+
+    /* *********************
+    SCHEDULING PAGE
+    ************************/
+    #service-spotlight-container {
+        flex-direction: row;
+    }
+    .service-spotlight-card {
+        height: 210px;
+        transition: transform 0.3s ease;
+    }
+    .service-spotlight-card:hover {
+        transform: translateY(-5px);
+        transition: transform 0.1s ease;
+    }
+
+    #service-modal-open-buttons {
+        flex-direction: row;
+    }
+    .service-modal-button-card img {
+        width: 100px;
+        height: auto;
+        transition: all 0.3s ease;
+    }
+    .service-modal-button-card:hover img {
+        transform: scale(1.05);
+        transition: all 0.1s ease;
+    }
+}
+@media (min-width: 680px) {
+    header h1 { 
+        font-size: 1.5rem;
+    }
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .service-spotlight-card {
+        height: 180px;
+    }    
 }
 
 @media (min-width: 1000px) {
     /* ************
     PAGE WIDE STYLES
     ***************/
+    header img {
+        width: 150px;
+        height: auto;
+    }
+
+    header h1 { 
+        font-size: 2rem;
+        padding-left: 5rem;
+    }
+
     nav ul li {
         scale: 1.2;
         margin: 0.5rem 1rem;

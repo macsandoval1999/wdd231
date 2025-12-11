@@ -11,12 +11,14 @@ Universal Styles
     --primary-color: #0b1b35;
     --darkbg-text: #ffffff;
     --secondary-color: #cccccc;
+    --background: #f0f0f0;
 }
 body {
     min-width: 320px;
     overflow-x: hidden;
     font-family: 'sans-serif', Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
+    background-color: var(--background);
 }
 
 
@@ -56,7 +58,7 @@ Page-Wide Styles
 /* Mobile Menu Toggle Button */
 #menu {
     position: absolute;
-    top: 3.7rem;
+    top: 2.5rem;
     right: 2rem;
     font-size: 2.5rem;
     cursor: pointer;
@@ -239,13 +241,6 @@ INDEX PAGE STYLES
     margin: 1rem 0;
     float: right;
     border-radius: 5px;
-    transition: all 0.3s ease;
-}
-.contact-us a:hover {
-    transform: translateY(-3px);
-    transition: all 0.1s ease;
-    box-shadow: 0 0 10px var(--highlight-color);
-    border: 1px solid var(--primary-color);
 }
 
 /* Visit Us Section */
@@ -265,12 +260,6 @@ INDEX PAGE STYLES
 .visit-us address {
     padding: 0.5rem 0;
 }
-
-
-
-
-
-
 
 
 
@@ -457,6 +446,85 @@ INVENTORY PAGE STYLES
 
 
 
+/* ***********************
+SCHEDULING PAGE
+**************************/
+
+/* Section headers */
+.section-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem 0 0.5rem 0;
+}
+
+/* Service Spotlight Cards */
+#service-spotlight-container {
+    display: flex;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.service-spotlight-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.37);
+    border: 0.1px solid var(--primary-color);
+    width: 75%;
+    max-width: 340px;
+    height: 150px;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+.service-spotlight-card h4 {
+    margin-bottom: 0.5rem;
+}
+.service-price {
+    font-weight: bold;
+    color: var(--primary-color);
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+.service-duration {
+    font-weight: bold;
+    color: var(--primary-color);
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+/* Service Options Section */
+.service-options-container {
+    padding: 1rem;
+    text-align: center;
+}
+#service-modal-open-buttons {
+    margin: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.service-modal-button-card {
+    padding: 0.75rem 1.5rem;
+    width: 75%;
+    max-width: 300px;
+    font-weight: bold;
+}
+.service-modal-button-card img {
+    width: 75px;
+    height: auto;
+}
+.service-modal-button-card button {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--background);
+}
 
 
 
